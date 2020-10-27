@@ -17,4 +17,5 @@ class App < Sinatra::Base
       @member3 = params["team"]["members"][2]
       
       erb :'../views/team'
+    end
 end
