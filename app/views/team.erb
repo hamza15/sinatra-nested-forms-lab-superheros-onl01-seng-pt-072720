@@ -2,8 +2,7 @@
 
 <h2>Team Motto: <%= @team_motto%></h2>
 
-<% @member1.each do |member| %>
+<h2>Hero Name: <%= @member1["name"] %></h2>
+<h2>Hero Power: <%= @member1["power"] %></h2>
+<h2>Hero Biography: <%= @member1["bio"] %></h2>
 
-<h1> <%= member[name]%></h1>
-
-<% end %>
