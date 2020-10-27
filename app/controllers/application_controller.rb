@@ -5,11 +5,15 @@ class App < Sinatra::Base
     set :views, Proc.new { File.join(root, "../views/") }
 
     get '/' do
-      erb :'super_hero'
+      erb :'../views/super_hero'
     end
     
     post '/team' do
-      @team = Team.new(params["team"]["name"], params["team"]["motto"])
-      
-      @hero1 = Hero.new(params["pirate"]["ships"][0]["name"], params["pirate"]["ships"][0]["type"], params["pirate"]["ships"][0]["booty"])
+      @team_name = params["team"]["name"]
+      @team_motto = params["team"]["motto"]
+
+      @member1 = params["team"]["members"][0]
+      @member2 = params["team"]["members"][1]
+      @member3 = params["team"]["members"][2]
+        
 end
